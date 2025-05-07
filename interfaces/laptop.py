@@ -26,8 +26,8 @@ class Laptop:
             "BATERIA" : "OK" if random.choice([True,False]) else "Cambiar de bateria"
         }
         return resultado
-    
-        # Polimorfismo
+
+    # Polimorfismo
     def realizar_informe_uso(self):
         resultado_informe={
             "Tipo":"Generica",

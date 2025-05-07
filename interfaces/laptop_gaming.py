@@ -1,9 +1,13 @@
 from laptop import Laptop
 
 class Laptop_Gaming(Laptop):
-    def __init__(self, marca, procesador, memoria, tarjeta_grafica, costo=500, impuesto=10):
+    def __init__(self, marca, procesador, memoria, tarjeta_grafica, precio, costo=500, impuesto=10):
         super().__init__(marca, procesador, memoria, costo, impuesto)
         self.tarjeta_grafica=tarjeta_grafica
+        self.precio=precio
+
+    def __str__(self):
+        return f"Marca: {self.marca} \n Procesador: {self.procesador} \n Memoria: {self.memoria} \n Tarjeta grafica: {self.tarjeta_grafica} \n Precio: {self.precio} \n"
 
     def realizar_diagnostico_sistema(self):
         resultado_diagnostico=super().realizar_diagnostico_sistema()
